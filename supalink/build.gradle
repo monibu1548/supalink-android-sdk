@@ -37,15 +37,16 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            afterEvaluate {
-                from components.release
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.findByName('release')
+
+                groupId = 'app.kyulabs.supalink'
+                artifactId = 'supalink'
+                version = '1.0.0'
             }
-            groupId = 'app.kyulabs.supalink'
-            artifactId = 'supalink'
-            version = '1.0.0'
         }
     }
 }
