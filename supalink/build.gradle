@@ -40,8 +40,9 @@ dependencies {
 publishing {
     publications {
         release(MavenPublication) {
-            from components.release
-
+            afterEvaluate {
+                from components.release
+            }
             groupId = 'app.kyulabs.supalink'
             artifactId = 'supalink'
             version = '1.0.0'
