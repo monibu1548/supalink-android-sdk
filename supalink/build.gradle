@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 android {
@@ -36,4 +37,14 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
 }
 
-group='com.github.monibu1548'
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+
+            groupId = 'app.kyulabs.supalink'
+            artifactId = 'supalink'
+            version = '1.0.0'
+        }
+    }
+}
