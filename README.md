@@ -1,3 +1,9 @@
+# ⚠️ Archived Repository
+
+This repository is archived and no longer maintained.
+No further development will be done and issues or pull requests will not be accepted.
+
+Please use [hackle-io/supalink-android-sdk](https://github.com/hackle-io/supalink-android-sdk) for the latest updates and ongoing support.
 
 # Supalink Android SDK
 
